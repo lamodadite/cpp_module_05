@@ -10,11 +10,15 @@ class Bureaucrat
 		std::string const name;
 		int grade;
 	public:
+		class GradeMushigiException {
+			private:
+
+		};
 		Bureaucrat();
 		Bureaucrat(std::string const &name);
 		Bureaucrat(const Bureaucrat &obj);
 		Bureaucrat& operator=(const Bureaucrat &obj);
 		~Bureaucrat();
-}
+};
 
 #endif
