@@ -8,7 +8,7 @@ int main()
 {
 	ShrubberyCreationForm	shrubbery("home");
 	ShrubberyCreationForm	shrubbery2("garden");
-	RobotomyRequestForm		robotomy("ToTo");
+	RobotonmyRequestForm	robotomy("ToTo");
 	PresidentialPardonForm	pardon("Flora");
 
 	Bureaucrat				amy("Amy", 130); //only can shrubbery
@@ -16,11 +16,6 @@ int main()
 	Bureaucrat				coco("Coco", 30); //can shrubbery, robotomy
 	Bureaucrat				dorae("Dorae", 2); // can do anything
 	Bureaucrat				elle("Elle", 150); //can't do anything
-
-	std::cout << "-------------------- get target test -------------------" << std::endl;
-	std::cout << "shrubbery target : " << shrubbery.getTarget() << std::endl;
-	std::cout << "robotomy target : " << robotomy.getTarget() << std::endl;
-	std::cout << "pardon target : " << pardon.getTarget() << std::endl;
 
 	std::cout << std::endl << "-------------------- execute unsigned form test -------------------" << std::endl;
 	amy.executeForm(shrubbery);

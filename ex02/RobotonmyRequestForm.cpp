@@ -1,11 +1,9 @@
-#include "RobotonmyRequestForm.hpp"
-
-RobotonmyRequestForm::RobotonmyRequestForm() {}
+#include "RobotomyRequestForm.hpp"
 
 RobotonmyRequestForm::RobotonmyRequestForm(std::string target) : AForm("RobotonmyRequestForm", 72, 45)
 {
 	this->target = target;
-	std::cout << "RobotonmyRequestForm " << AForm::getName() << " is constructed by copy" << std::endl;
+	std::cout << "RobotonmyRequestForm " << AForm::getName() << " is constructed" << std::endl;
 }
 
 RobotonmyRequestForm::RobotonmyRequestForm(const RobotonmyRequestForm &obj) : AForm("RobotonmyRequestForm", 72, 45)
@@ -18,6 +16,7 @@ RobotonmyRequestForm& RobotonmyRequestForm::operator=(const RobotonmyRequestForm
 {
 	this->target = obj.target;
 	std::cout << "RobotonmyRequestForm " << AForm::getName() << " is cpied by operator = " << std::endl;
+	return *this;
 }
 
 RobotonmyRequestForm::~RobotonmyRequestForm()
@@ -37,10 +36,10 @@ void RobotonmyRequestForm::execute(const Bureaucrat &executor) const
 	randNum = rand();
 	if (randNum % 2  == 0)
 	{
-		std::cout << getTarget() << " has been robotomized!" << std::endl;
+		std::cout << "robotomize success!!!!!!" << std::endl;
 	}
 	else
 	{
-		std::cout << getTarget() << " robotomized is failed!" << std::endl;
+		std::cout << " robotomize fail!!!!!!!!!!" << std::endl;
 	}
 }
