@@ -1,5 +1,5 @@
-NAME = ex00
-SRCS = main.cpp Bureaucrat.cpp
+NAME = ex02
+SRCS = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp
 INCS = incs
 OBJ_DIR = objs
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
