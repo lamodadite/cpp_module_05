@@ -6,38 +6,43 @@
 
 int main()
 {
+	/*
+	• ShrubberyCreationForm: Required grades: sign 145, exec 137
+	• RobotomyRequestForm: Required grades: sign 72, exec 45
+	• PresidentialPardonForm: Required grades: sign 25, exec 5
+	*/
 	ShrubberyCreationForm	shrubbery("home");
 	ShrubberyCreationForm	shrubbery2("garden");
-	RobotonmyRequestForm	robotomy("ToTo");
-	PresidentialPardonForm	pardon("Flora");
+	RobotonmyRequestForm	robotomy("robot");
+	PresidentialPardonForm	pardon("Yoon");
 
-	Bureaucrat				amy("Amy", 130); //only can shrubbery
-	Bureaucrat				bella("Bella", 70); //can shrubbery, robotomy sign
-	Bureaucrat				coco("Coco", 30); //can shrubbery, robotomy
-	Bureaucrat				dorae("Dorae", 2); // can do anything
-	Bureaucrat				elle("Elle", 150); //can't do anything
+	Bureaucrat				a("a", 130); //only can shrubbery
+	Bureaucrat				b("b", 70); //can shrubbery, robotomy sign
+	Bureaucrat				c("c", 30); //can shrubbery, robotomy
+	Bureaucrat				d("d", 2); // can do anything
+	Bureaucrat				e("e", 150); //can't do anything
 
 	std::cout << std::endl << "-------------------- execute unsigned form test -------------------" << std::endl;
-	amy.executeForm(shrubbery);
-	coco.executeForm(robotomy);
-	dorae.executeForm(pardon);
+	a.executeForm(shrubbery);
+	c.executeForm(robotomy);
+	d.executeForm(pardon);
 
-	dorae.signForm(shrubbery);
-	dorae.signForm(shrubbery2);
-	dorae.signForm(robotomy);
-	dorae.signForm(pardon);
+	d.signForm(shrubbery);
+	d.signForm(shrubbery2);
+	d.signForm(robotomy);
+	d.signForm(pardon);
 
 	std::cout << std::endl << "-------------------- execute SHRUBBERY test -------------------" << std::endl;
-	elle.executeForm(shrubbery);
-	amy.executeForm(shrubbery);
-	coco.executeForm(shrubbery2);
+	e.executeForm(shrubbery);
+	a.executeForm(shrubbery);
+	c.executeForm(shrubbery2);
 
 	std::cout << std::endl << "-------------------- execute ROBOTOMY test -------------------" << std::endl;
-	amy.executeForm(robotomy);
-	bella.executeForm(robotomy);
-	coco.executeForm(robotomy);
+	a.executeForm(robotomy);
+	b.executeForm(robotomy);
+	c.executeForm(robotomy);
 	
 	std::cout << std::endl << "-------------------- execute PARDON test -------------------" << std::endl;
-	amy.executeForm(pardon);
-	dorae.executeForm(pardon);
+	a.executeForm(pardon);
+	d.executeForm(pardon);
 }

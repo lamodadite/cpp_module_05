@@ -40,6 +40,6 @@ void RobotonmyRequestForm::execute(const Bureaucrat &executor) const
 	}
 	else
 	{
-		std::cout << " robotomize fail!!!!!!!!!!" << std::endl;
+		std::cout << "robotomize fail!!!!!!!!!!" << std::endl;
 	}
 }
