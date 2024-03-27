@@ -42,6 +42,7 @@ AForm*	Intern::makeForm(std::string type, std::string name)
 	{
 		if (formNames[i] == type)
 		{
+			std::cout << "Intern creates " << type << std::endl;
 			return (this->*f[i])(name);
 		}
 	}

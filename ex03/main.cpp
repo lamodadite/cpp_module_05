@@ -12,9 +12,9 @@ int main()
 
 	try
 	{
-		AForm	*shrubberyForm = internA.makeForm("shrubbery creation", "here");
-		AForm	*robotForm = internA.makeForm("robotomy request", "toto");
-		AForm	*pardonForm = internA.makeForm("presidential pardon", "prill");
+		AForm	*shrubberyForm = internA.makeForm("ShrubberyCreation", "a");
+		AForm	*robotForm = internA.makeForm("RobotomyRequest", "b");
+		AForm	*pardonForm = internA.makeForm("PresidentialPardon", "c");
 
 		master.signForm(*shrubberyForm);
 		master.executeForm(*shrubberyForm);
